@@ -2,7 +2,7 @@ using System;
 using System.Threading;
 using Confluent.Kafka;
 
-namespace DataAnalyse
+namespace DataAnalyze
 {
     public class KafkaConsumers
     {

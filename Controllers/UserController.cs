@@ -1,7 +1,7 @@
-﻿using DataAnalyse.Infrastructure;
+﻿using DataAnalyze.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DataAnalyse.Net.Controllers
+namespace DataAnalyze.Net.Controllers
 {
     [Produces("application/json")]
     [Route("api/[controller]/[action]")]

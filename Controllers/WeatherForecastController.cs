@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DataAnalyse.Net.Controllers
+namespace DataAnalyze.Net.Controllers
 {
     [ApiController]
     [Route("[controller]")]

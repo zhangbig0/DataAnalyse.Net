@@ -1,6 +1,6 @@
 using System;
 
-namespace DataAnalyse.Net
+namespace DataAnalyze.Net
 {
     public class WeatherForecast
     {

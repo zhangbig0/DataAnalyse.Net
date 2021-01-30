@@ -1,12 +1,12 @@
 ﻿using System;
-using DataAnalyse.Entity;
+using DataAnalyze.Entity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
 
 #nullable disable
 
-namespace DataAnalyse.Infrastructure
+namespace DataAnalyze.Infrastructure
 {
     public partial class TelecomContext : DbContext
     {

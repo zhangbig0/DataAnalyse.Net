@@ -1,6 +1,7 @@
 using System;
-using DataAnalyse.Infrastructure;
-using DataAnalyse.Net.Services;
+using DataAnalyze.Infrastructure;
+using DataAnalyze.Net.Infrastructure;
+using DataAnalyze.Net.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -11,7 +12,7 @@ using Microsoft.OpenApi.Models;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 
 
-namespace DataAnalyse.Net
+namespace DataAnalyze.Net
 {
     public class Startup
     {
@@ -43,11 +44,19 @@ namespace DataAnalyse.Net
                     .EnableDetailedErrors()
             );
 
+            services.AddDbContextPool<TelecomRecordContext>(options =>
+            {
+                options.UseMySql("server = 121.5.26.37; database = data; user = zhangbig; password = zq19990821",
+                    new MySqlServerVersion(new Version(5, 7, 30)),
+                    builder => { builder.CharSetBehavior(CharSetBehavior.NeverAppend); });
+            });
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "DataAnalyse.Net", Version = "v1"});
             });
-            services.AddScoped<IProvinceConversionService,ProvinceConversionService>();
+            services.AddScoped<IProvinceConversionService, ProvinceConversionService>();
+            services.AddScoped<ITelecomRepository, TelecomRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

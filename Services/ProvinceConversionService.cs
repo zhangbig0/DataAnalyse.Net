@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using DataAnalyse.Infrastructure;
+using DataAnalyze.Infrastructure;
 
-namespace DataAnalyse.Net.Services
+namespace DataAnalyze.Net.Services
 {
     public class ProvinceConversionService : IProvinceConversionService
     {

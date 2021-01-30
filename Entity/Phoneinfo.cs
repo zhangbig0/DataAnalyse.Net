@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace DataAnalyse
+namespace DataAnalyze
 {
     public partial class Phoneinfo
     {

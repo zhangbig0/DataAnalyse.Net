@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using DataAnalyse;
-using DataAnalyse.Infrastructure;
-using DataAnalyse.Net.Services;
+using DataAnalyze;
+using DataAnalyze.Infrastructure;
+using DataAnalyze.Net.Services;
 
-namespace DataAnalyse.Net.Controllers
+namespace DataAnalyze.Net.Controllers
 {
     [Produces("application/json")]
     [Route("api/[controller]/[action]")]
